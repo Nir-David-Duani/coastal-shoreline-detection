@@ -1,5 +1,6 @@
-# Yam Yabasha
-
+# Coastal Shoreline Detection
+**Yam Yabasha** is a semi-automatic shoreline extraction system for fixed
+coastal cameras.
 Semi-automatic shoreline extraction for fixed coastal cameras. Each incoming
 frame is aligned to a location reference, segmented into water and land with
 CLIPSeg, and converted into a connected shoreline inside a broad user-selected
