@@ -1,0 +1,8 @@
+matplotlib>=3.8
+numpy>=1.26
+opencv-python>=4.9
+pandas>=2.1
+pillow>=10.0
+torch>=2.2
+tqdm>=4.66
+transformers>=4.40

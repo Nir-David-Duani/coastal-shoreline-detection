@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yam-yabasha"
+version = "0.1.0"
+description = "Semi-automatic shoreline extraction from fixed coastal cameras"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "opencv-python>=4.9",
+    "pandas>=2.1",
+    "pillow>=10.0",
+    "torch>=2.2",
+    "tqdm>=4.66",
+    "transformers>=4.40",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+notebook = [
+    "ipykernel>=6.0",
+    "nbclient>=0.10",
+    "nbformat>=5.0",
+]
+
+[project.scripts]
+yam-yabasha = "yam_yabasha.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
